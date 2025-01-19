@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create a nginx container
+      feather:
+        container_name: "nginx"
+        container_image: "nginx:latest"
+        state: "running"
